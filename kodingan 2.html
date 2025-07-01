@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Game Cinta untuk Seni Lestari</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6f0;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #d63384;
+    }
+    .btn {
+      padding: 15px 25px;
+      font-size: 16px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: #ff4d6d;
+      color: white;
+    }
+    #noBtn {
+      background-color: #ffb3c6;
+      color: white;
+      position: absolute;
+    }
+    .message {
+      font-size: 20px;
+      color: #800040;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Alooo, My babyy❤️
+  </h1>
+  <p>maaf yo udahh lamo ga ketemuu😔</p>
+  <p>Aku tau kamu pasti kangen samo aku kannn🤣</p>
+
+  <button class="btn" id="yesBtn" onclick="showLove()">Kangen Banget😘</button>
+  <button class="btn" id="noBtn" onmouseover="moveButton()">Idakk😡</button>
+
+  <div class="message" id="messageBox"></div>
+  <audio id="bgMusic" src="https://voca.ro/1aKA5BZBKKli" loop></audio>
+
+  <script>
+    function showLove() {
+      document.getElementById("messageBox").innerHTML = 
+        "Udah tau sih kamu pasti kangen😘";
+    }
+
+    function moveButton() {
+      const noBtn = document.getElementById("noBtn");
+      noBtn.style.top = Math.random() * window.innerHeight + "px";
+      noBtn.style.left = Math.random() * window.innerWidth + "px";
+    }
+  </script>
+</body>
+</html>
